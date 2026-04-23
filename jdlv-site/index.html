@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonde typo-organismes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+   
+      <h1>Typo-organismes</h1>
+   
+    <div class="workspace">
+      <section class="panel controls">
+      <div class="controls-top">
+        <div class="buttons" id="letter-buttons"></div>
+      </div>
+
+      <div class="buttons utility-buttons">
+        <button id="undo" type="button">Undo</button>
+        <button id="clear" type="button">Clear</button>
+        <button id="toggle-grid" type="button" class="active">Hide Grid</button>
+        <button id="preview" type="button">Preview</button>
+      </div>
+
+      <div class="hint">
+        Click letters to compose a word. Use <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Z</kbd> to undo.
+      </div>
+    </section>
+
+    <section class="panel canvas-panel">
+      <canvas id="canva-draw"></canvas>
+    </section>
+    </div>
+   
+  </main>
+  <div id="backdrop" class="backdrop hidden"></div>
+
+  <div id="life-modal" class="modal hidden">
+    <section class="panel preview-panel modal-panel">
+      <div class="preview-header">
+        <h2>Preview</h2>
+  
+        <div class="buttons">
+          <span id="gol-step-display">Step: 0</span>
+
+          <button id="gol-start" type="button">Play</button>
+          <button id="gol-pause" type="button">Pause</button>
+          <button id="gol-step" type="button">Step</button>
+          <button id="gol-stop" type="button">Reset</button>
+          <button id="gol-close" type="button">✕</button>
+        </div>
+      </div>
+  
+      <canvas id="gol"></canvas>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
